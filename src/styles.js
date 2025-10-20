@@ -10,9 +10,9 @@ heroSubText:
   "text-[#dfd9ff] font-medium lg:text-[20px] sm:text-[16px] xs:text-[14px] text-[12px] lg:leading-[24px]",
 
   sectionHeadText:
-    "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
+    "text-white font-black md:text-[38px] sm:text-[32px] xs:text-[30px] text-[22px]",
   sectionSubText:
-    "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+    "sm:text-[12px] text-[9px] text-secondary uppercase tracking-wider",
 };
 
 export { styles };

@@ -1,61 +1,67 @@
 import logo from "./logo-square.png";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import datsci from "./datsci.png";
+import danal from "./danal.png";
+import bigdata from "./bigdata.png";
+import netsec from "./netsec.png";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import mysql from "./tech/mysql.png";
+import python from "./tech/py.png";
+import r from "./tech/r.png";
+import c from "./tech/c.png";
+import hadoop from "./tech/hadoop.png";
+import spark from "./tech/spark.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import binus from "./company/binus.png";
+import bncc from "./company/bncc.png";
+import ureeka from "./company/ureeka.png";
+import bnec from "./company/bnec.jpg";
+import tfi from "./company/tfi.png";
+import penabur from "./company/penabur.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  spark,
+  hadoop,
+  c,
+  r,
+  python,
+  mysql,
+  penabur,
+  tfi,
+  bnec,
+  ureeka,
+  bncc,
+  binus,
+  netsec,
+  bigdata,
+  datsci,
+  danal,
   logo,
-  backend,
-  creator,
-  mobile,
   web,
   github,
   menu,
   close,
   css,
-  docker,
-  figma,
   git,
   html,
   javascript,
-  mongodb,
-  nodejs,
   reactjs,
-  redux,
   tailwind,
-  typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   carrent,
   jobit,
   tripguide,
