@@ -12,7 +12,7 @@ heroSubText:
   sectionHeadText:
     "text-white font-black md:text-[38px] sm:text-[32px] xs:text-[30px] text-[22px]",
   sectionSubText:
-    "sm:text-[12px] text-[9px] text-secondary uppercase tracking-wider",
+    "sm:text-[14px] text-[12px] text-secondary uppercase tracking-wider",
 };
 
 export { styles };

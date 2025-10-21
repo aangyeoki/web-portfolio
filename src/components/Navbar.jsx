@@ -10,7 +10,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-20 bg-primary`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
@@ -21,9 +21,9 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 rounded-full object-cover" />
-          <p className="text-white text-[14px] font-bold cursor-pointer flex">
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Vincentia&nbsp;Angelica&nbsp;Boone&nbsp;&nbsp;
-            <span className="sm:block hidden">| &nbsp; From Data to Insight</span>
+            <span className="sm:block hidden">| &nbsp; From Data to Insights</span>
           </p>
         </Link>
 
@@ -31,7 +31,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[12px] font-medium cursor-pointer`}
+              className={`${active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[16px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 className='w- [28px] h-[28px] object-contain cursor-pointer'
                 onClick={() => setToggle(!toggle)} />
           <div className={`${toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
+            <ul className="list-none flex justify-end items-start flex-1flex-col gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}

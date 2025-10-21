@@ -114,6 +114,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.purple-text-gradient {
+  background: linear-gradient(to right, #a855f7, #6b21a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

@@ -29,11 +29,21 @@ import bnec from "./company/bnec.jpg";
 import tfi from "./company/tfi.png";
 import penabur from "./company/penabur.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-
+import tiroid from "./tiroid.png";
+import xlungs from "./xlungs.png";
+import newmeow from "./newmeow.png";
+import lexipal from "./lexipal.png";
+import diamondcut from "./diamondCut.png";
+import twtdash from "./twtdash.png";
+import cproj from "./cproj.png";
 export {
+  tiroid,
+  xlungs,
+  newmeow,
+  lexipal, 
+  diamondcut,
+  twtdash,
+  cproj,
   spark,
   hadoop,
   c,
@@ -62,7 +72,4 @@ export {
   reactjs,
   tailwind,
   threejs,
-  carrent,
-  jobit,
-  tripguide,
 };

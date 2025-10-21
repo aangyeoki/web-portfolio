@@ -13,7 +13,7 @@ const ExperienceCard = ({ experience }) => {
       contentStyle={{
         background: "#1d1836",
         color: "#fff",
-        padding: "16px 20px", // lebih kecil dari default
+        padding: "16px 20px", 
         borderRadius: "12px",
       }}
       contentArrowStyle={{ borderRight: "6px solid #232631" }}
@@ -50,7 +50,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 text-[12px] pl-1 tracking-wide leading-snug"
+            className="text-white-100 text-[13px] pl-1 tracking-wide leading-snug"
           >
             {point}
           </li>
@@ -95,4 +95,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, "experience");
