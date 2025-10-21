@@ -1,4 +1,15 @@
 import {
+  blcu,
+  csc,
+  ecomp,
+  fe,
+  fl,
+  flpeeps,
+  fp,
+  hackathon, 
+  komdigi,
+  sap,
+  techup,
   tiroid, 
   xlungs,
   newmeow,
@@ -358,5 +369,18 @@ const projects = [
   },
 ];
 
+const certificates = [
+  { img: blcu },
+  { img: csc },
+  { img: ecomp },
+  { img: fe },
+  { img: fl },
+  { img: flpeeps },
+  { img: fp },
+  { img: hackathon },
+  { img: komdigi },
+  { img: sap },
+  { img: techup },
+];
 
-export { services, technologies, experiences, projects };
+export { services, technologies, experiences, projects , certificates };

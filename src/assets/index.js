@@ -1,4 +1,5 @@
 import logo from "./logo-square.png";
+import me from "./me.png";
 import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
@@ -29,6 +30,18 @@ import bnec from "./company/bnec.jpg";
 import tfi from "./company/tfi.png";
 import penabur from "./company/penabur.png";
 
+import blcu from './certificate/blcu.png';
+import csc from './certificate/csc.png';
+import ecomp from './certificate/ecomp.png';
+import fe from './certificate/fe.png';
+import fl from './certificate/fl.png';
+import flpeeps from './certificate/flpeeps.png';
+import fp from './certificate/fp.png';
+import hackathon from './certificate/hackathon.png';
+import komdigi from './certificate/komdigi.png';
+import sap from './certificate/sap.png';
+import techup from './certificate/techup.png';
+
 import tiroid from "./tiroid.png";
 import xlungs from "./xlungs.png";
 import newmeow from "./newmeow.png";
@@ -36,7 +49,20 @@ import lexipal from "./lexipal.png";
 import diamondcut from "./diamondCut.png";
 import twtdash from "./twtdash.png";
 import cproj from "./cproj.png";
+
 export {
+  blcu,
+  csc,
+  ecomp,
+  fe,
+  fl,
+  flpeeps,
+  fp,
+  hackathon, 
+  komdigi,
+  sap,
+  techup,
+  me,
   tiroid,
   xlungs,
   newmeow,
