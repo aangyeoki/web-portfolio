@@ -20,7 +20,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 rounded-full object-cover" />
+          {/* <img src={logo} alt="logo" className="w-9 h-9 rounded-full object-cover" /> */}
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Vincentia&nbsp;Angelica&nbsp;Boone&nbsp;&nbsp;
             <span className="lg:block hidden">| &nbsp; From Data to Insights</span>

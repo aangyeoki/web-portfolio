@@ -1,74 +1,95 @@
-import { useRef, useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-coverflow';
-import { IoArrowBackOutline, IoArrowForwardOutline } from 'react-icons/io5';
+import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { certificates } from '../constants';
+import { div } from 'framer-motion/client';
+import 'flowbite';
 
-const Carousel = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const [swiperReady, setSwiperReady] = useState(false);
 
-  useEffect(() => {
-    setSwiperReady(true);
-  }, []);
-
+const Carousel = ({ index, img }) => {
   return (
-<div className="relative w-full max-w-6xl mx-auto my-8">
-  {swiperReady && (
-    <Swiper
-      effect="coverflow"
-      grabCursor
-      centeredSlides
-      loop
-      slidesPerView="auto"
-      spaceBetween={20}
-      coverflowEffect={{
-        rotate: 5,
-        stretch: 0,
-        depth: 80,
-        modifier: 0.9,}}
-      pagination={{ clickable: true }}
-      navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-      onBeforeInit={(swiper) => {
-        swiper.params.navigation.prevEl = prevRef.current;
-        swiper.params.navigation.nextEl = nextRef.current;
-      }}
-      modules={[EffectCoverflow, Pagination, Navigation]}
-      className="swiper_container"
-    >
-      {certificates.map((cert, index) => (
-        <SwiperSlide key={index} className="!w-[480px] flex justify-center">
-          <img
-            src={cert.img}
-            alt={cert.name}
-            className=" object-none w-full h-[360px] rounded-lg shadow-lg bg-white"
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  )}
+<div
+  id="default-carousel"
+  className="relative w-full max-w-5xl mx-auto z-10"
+  data-carousel="slide"
+>
+  {/* Carousel wrapper */}
+  <div className="relative h-56 sm:h-64 md:h-80 lg:h-96 overflow-hidden rounded-2xl flex items-center justify-center">
+    {certificates.map((cert, index) => (
+      <div
+        key={index}
+        className="hidden duration-700 ease-in-out flex justify-center items-center"
+        data-carousel-item
+      >
+        <img
+          src={cert.img}
+          alt={`certificate-${index + 1}`}
+          className="absolute block w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] rounded-xl object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 shadow-lg"
+        />
+      </div>
+    ))}
+  </div>
 
-  {/* Tombol navigasi */}
-  <div
-    ref={prevRef}
-    className="absolute left-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/70 hover:bg-white p-2 rounded-full shadow"
-  >
-    <IoArrowBackOutline size={22} />
+  {/* Slider indicators */}
+  <div className="absolute z-30 flex -translate-x-1/2 bottom-4 left-1/2 space-x-3 rtl:space-x-reverse">
+    {certificates.map((_, index) => (
+      <button
+        key={index}
+        type="button"
+        className="w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white"
+        aria-current={index === 0 ? "true" : "false"}
+        aria-label={`Slide ${index + 1}`}
+        data-carousel-slide-to={index}
+      ></button>
+    ))}
   </div>
-  <div
-    ref={nextRef}
-    className="absolute right-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/70 hover:bg-white p-2 rounded-full shadow"
+
+  {/* Slider controls */}
+  <button
+    type="button"
+    className="absolute top-1/2 left-4 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full shadow-md backdrop-blur-sm transition"
+    data-carousel-prev
   >
-    <IoArrowForwardOutline size={22} />
-  </div>
+    <svg
+      className="w-4 h-4 text-gray-700"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 6 10"
+    >
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M5 1 1 5l4 4"
+      />
+    </svg>
+    <span className="sr-only">Previous</span>
+  </button>
+
+  <button
+    type="button"
+    className="absolute top-1/2 right-4 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full shadow-md backdrop-blur-sm transition"
+    data-carousel-next
+  >
+    <svg
+      className="w-4 h-4 text-gray-700"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 6 10"
+    >
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="m1 9 4-4-4-4"
+      />
+    </svg>
+    <span className="sr-only">Next</span>
+  </button>
 </div>
-  );
-};
-// AYO BANTU GUA
+
+);}
 
 export default Carousel;
