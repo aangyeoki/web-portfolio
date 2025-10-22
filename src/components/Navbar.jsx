@@ -23,11 +23,11 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="w-9 h-9 rounded-full object-cover" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Vincentia&nbsp;Angelica&nbsp;Boone&nbsp;&nbsp;
-            <span className="sm:block hidden">| &nbsp; From Data to Insights</span>
+            <span className="lg:block hidden">| &nbsp; From Data to Insights</span>
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden md:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -38,12 +38,12 @@ const Navbar = () => {
             </li> ))}
         </ul>
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img src={toggle ? menu : close} 
+          <img src={toggle ? close : menu} 
                 alt="menu"
-                className='w- [28px] h-[28px] object-contain cursor-pointer'
+                className='w-[28px] h-[28px] object-contain cursor-pointer'
                 onClick={() => setToggle(!toggle)} />
-          <div className={`${toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-            <ul className="list-none flex justify-end items-start flex-1flex-col gap-4">
+          <div className={`${toggle ? 'flex' : 'hidden'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}

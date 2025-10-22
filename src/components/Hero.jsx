@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 // import { ComputersCanvas } from './canvas';
+import Carousel from './Carousel';
 import { me } from '../assets';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { certificates } from '../constants';
@@ -10,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
   return (
-    <section className='relative w-full h-screen mx-auto flex-wrap'>
+    <section className="relative w-full min-h-screen mx-auto flex flex-col lg:flex-row flex-wrap items-center justify-between">
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915eff]'/>
@@ -46,30 +47,11 @@ const Hero = () => {
               <FaInstagram />
             </a>
           </div>
-          {/* CAROUSEL */}
-          <div className="mt-8 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%]">
-            <Slider
-              dots={true}
-              infinite={true}
-              speed={500}
-              slidesToShow={1}
-              slidesToScroll={1}
-              autoplay={true}
-              autoplaySpeed={2500}
-              arrows={false}
-              className="rounded-xl"
-            >
-              {certificates.map((item, index) => (
-                <div key={index} className="flex justify-center">
-                  <img
-                    src={item.img}
-                    alt={`carousel-${index}`}
-                    className="rounded-xl object-cover w-full h-[200px] sm:h-[250px] md:h-[300px]"
-                  />
-                </div>
-              ))}
-            </Slider>
-          </div>
+          {/* <div className="mt-6 w-full flex justify-center">
+            <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[55%] xl:w-[50%]"> */}
+              <Carousel />
+            {/* </div>
+          </div> */}
         </div>
       </div>
       <div className="flex justify-center lg:justify-end items-center w-full h-full">
