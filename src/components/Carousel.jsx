@@ -69,5 +69,6 @@ const Carousel = () => {
 </div>
   );
 };
+// AYO BANTU GUA
 
 export default Carousel;
