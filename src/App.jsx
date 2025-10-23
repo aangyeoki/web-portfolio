@@ -12,6 +12,7 @@ const App = () => {
       <About />
       <Experience />
       <Tech />
+      <Carousel />
       <Works />
       <div className="relative z-0">
         <Contact />

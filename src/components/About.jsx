@@ -40,14 +40,7 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Vincentia&nbsp;Angelica&nbsp;Boone</h2>
       </motion.div>
       <motion.p variants={fadeIn("", "", 0.1, 1)}>
-        A 5th-semester CS student at BINUS University with experience 
-        and a deep passion for Web Development, Data, and AI. 
-        I explore everything from analytics, data mining, and big data 
-        to predictive modeling, then bring these ideas to life through 
-        web development, connecting data insights with real-world applications. 
-        I see data as a reflection of life: unpredictable, fascinating, and 
-        full of curiosity. Curiosity drives us to seek meaning, and 
-        every uncertainty is an opportunity to discover something new.
+        I’m a Computer Science student passionate about building data-driven and AI-powered systems that make an impact. I’ve developed emotion recognition, emotional text-to-speech, and early lung disease detection models, integrating them into functional web platforms. I thrive at the intersection of data, AI, and web development, turning technical ideas into real, usable solutions that help people and drive meaningful change.
       </motion.p>
 
       <div className="mt-10 mb-16 flex flex-wrap justify-center gap-4 sm:gap-6">
